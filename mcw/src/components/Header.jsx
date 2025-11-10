@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <div>
-        <img src="logo" alt="logo" />
+        <img src="mcw\src\components\logo.jpg" alt="logo" />
         <h1>Maximum Click World</h1>
       </div>
       <div>
