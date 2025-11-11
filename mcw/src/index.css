@@ -1,5 +1,26 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Lexica";
+  src: url(../src/assets/fonts/Lastica/fonnts.com-Lastica.ttf);
+  style: normal;
+}
+@font-face {
+  font-family: "Popins";
+  src: url(../src/assets/fonts/Poppins/Poppins-Medium.ttf);
+  style: normal;
+}
 
 :root {
+  /* bg colors */
   --purple-bg: #2c1e4a;
+
+  /* Color fonts */
+  --white: #fff;
+}
+header h1,
+.font-lastica {
+  font-family: "Lexica";
+}
+header span {
+  font-family: "Poppins";
 }
