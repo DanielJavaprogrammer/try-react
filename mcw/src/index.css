@@ -4,23 +4,31 @@
   src: url(../src/assets/fonts/Lastica/fonnts.com-Lastica.ttf);
   style: normal;
 }
-@font-face {
-  font-family: "Popins";
-  src: url(../src/assets/fonts/Poppins/Poppins-Medium.ttf);
-  style: normal;
-}
 
 :root {
-  /* bg colors */
-  --purple-bg: #2c1e4a;
-
   /* Color fonts */
   --white: #fff;
 }
-header h1,
-.font-lastica {
+header h1 {
   font-family: "Lexica";
 }
-header span {
+header span,
+.text-hero {
   font-family: "Poppins";
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

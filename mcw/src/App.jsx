@@ -12,7 +12,7 @@ import HeroSection from "./components/heroSection/HeroSection";
 
 function App() {
   return (
-    <div className="bg-(--purple-bg) w-full h-screen">
+    <div className="bg-linear-to-r from-[#1c3263] to-[#442063] w-full h-screen">
       <Header />
       <HeroSection />
       {/* <Routes>

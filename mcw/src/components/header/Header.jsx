@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="py-2 flex justify-between px-20 items-center text-(--white)">
+    <header className="py-2 flex justify-between px-40 items-center text-(--white) ">
       <div className="flex justify-between items-center gap-3">
         <img
           src="../src/components/header/logo.png"
