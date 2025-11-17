@@ -1,24 +1,21 @@
-import { useState } from "react";
 import "./index.css";
-import Header from "./components/header/Header";
-import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+// import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Sobre from "./pages/Sobre";
-import Contato from "./pages/Contato";
-import "@fontsource/poppins"; // weight padrão (400)
-import "@fontsource/poppins/500.css";
-import HeroSection from "./components/heroSection/HeroSection";
+// import Home from "./pages/Home";
+// import Sobre from "./pages/Sobre";
+// import Contato from "./pages/Contato";
+import HeroSection from "./components/HeroSection/HeroSection";
+import ServicesSection from "./components/ServicesSection/ServicesSection";
+import HowToUse from "./components/HowToUse/HowToUse";
 
 function App() {
   return (
-    <div className="bg-linear-to-r from-[#1c3263] to-[#442063] w-full h-screen">
+    <div>
       <Header />
       <HeroSection />
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signupWorker" element={<Contato />} />
-      </Routes> */}
+      <ServicesSection />
+      <HowToUse />
     </div>
   );
 }

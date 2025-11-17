@@ -1,0 +1,42 @@
+.header {
+  height: 80px;
+  padding-inline: 10rem;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerLogo h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.headerLinks {
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width: 970px) {
+  .header {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerLogo > h1 {
+    display: none;
+  }
+
+  .headerLinks {
+    justify-content: center;
+  }
+}

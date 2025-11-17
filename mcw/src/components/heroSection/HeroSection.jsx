@@ -1,4 +1,4 @@
-import styles from "../heroSection/HeroSextion.module.css";
+import styles from "./HeroSextion.module.css";
 
 function HeroSection() {
   return (
@@ -13,9 +13,8 @@ function HeroSection() {
         <p className={styles.subtitle}>
           Contrate serviços de um jeito rápido, seguro e confiável
         </p>
-
-        <button className={styles.btn}>Fazer Orçamento</button>
       </div>
+      <button className={styles.btn}>Fazer Orçamento</button>
     </section>
   );
 }
