@@ -12,8 +12,7 @@
   font-family: "Orbitron", sans-serif;
   font-size: 2rem;
   color: var(--pink-dark);
-  padding-bottom: 50px;
-  padding-top: 10px;
+  padding: 60px;
 }
 
 .servicesContainer {
@@ -72,11 +71,11 @@
   }
 
   .cardService {
-    width: 95%; /* ainda maior no mobile */
+    width: 100%; /* ainda maior no mobile */
   }
 
   .cardService img {
-    width: 95%;
+    width: 100%;
     max-width: none; /* imagem enorme no mobile */
   }
 }

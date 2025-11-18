@@ -14,6 +14,11 @@
   gap: 0.5rem;
 }
 
+.headerLogo img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
 .headerLogo h1 {
   font-family: "Orbitron", sans-serif;
   font-size: 1.3rem;
@@ -25,6 +30,54 @@
   text-align: center;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.headerLinks img {
+  max-width: 11.25rem;
+}
+.linkText {
+  color: var(--white);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+
+  /* prepara o texto para receber gradiente */
+  background-image: linear-gradient(
+    90deg,
+    #ff00e5,
+    #8e2bff,
+    #00c8ff,
+    #00ff9d,
+    #ffea00
+  );
+  background-size: 300%;
+  background-position: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--white); /* volta a ficar branco */
+}
+
+.linkText:hover {
+  -webkit-text-fill-color: transparent;
+  animation: colorWave 2s linear forwards;
+  transform: scale(1.03);
+}
+
+@keyframes colorWave {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
 @media screen and (max-width: 970px) {
   .header {
     padding: 1rem;

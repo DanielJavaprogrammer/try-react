@@ -5,21 +5,13 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerLogo}>
-        <img
-          src="../src/components/header/logo.png"
-          alt="logo"
-          className="w-15 h-15"
-        />
+        <img src="../src/components/header/logo.png" alt="logo" />
         <h1>Maximum Click World</h1>
       </div>
       <div className={styles.headerLinks}>
         <Link to="/signupWorker">
-          <span>Sou um profissional</span>
-          <img
-            src="../src/components/header/underline.png"
-            alt="underline"
-            className="w-45"
-          />
+          <span className={styles.linkText}>Sou um profissional</span>
+          <img src="../src/components/header/underline.png" alt="underline" />
         </Link>
       </div>
     </header>
