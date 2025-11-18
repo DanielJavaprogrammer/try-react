@@ -25,6 +25,10 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .servicesSection {
+    padding-inline: 30px;
+  }
 }
 
 @media (max-width: 600px) {
