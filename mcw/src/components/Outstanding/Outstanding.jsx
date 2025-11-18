@@ -1,9 +1,33 @@
 import styles from "../Outstanding/Outstanding.module.css";
 import profile1 from "../../assets/outstandingImages/profile1.webp";
-// import profile2 from "../../assets/outstandingImages/profile2.webp";
-// import profile3 from "../../assets/outstandingImages/profile3.webp";
+import profile2 from "../../assets/outstandingImages/profile2.webp";
+import profile3 from "../../assets/outstandingImages/profile3.webp";
 import starRating from "../../assets/outstandingImages/stars-rating.webp";
 import verifyinfSign from "../../assets/outstandingImages/verifyinf-sign.png";
+
+const data = [
+  {
+    title: "Web Development",
+    img: profile1,
+    name: "Enzo Indio",
+    jobs: 289,
+    rating: starRating,
+  },
+  {
+    title: "Video Maker",
+    img: profile2,
+    name: "Lara Silva",
+    jobs: 150,
+    rating: starRating,
+  },
+  {
+    title: "Eletricista",
+    img: profile3,
+    name: "Tony Ramos",
+    jobs: 320,
+    rating: starRating,
+  },
+];
 
 function Outstanding() {
   return (
