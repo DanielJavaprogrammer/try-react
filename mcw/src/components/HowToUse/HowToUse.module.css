@@ -12,7 +12,8 @@
   font-family: "Orbitron", sans-serif;
   font-size: 2rem;
   color: var(--pink-dark);
-  padding: 60px;
+  padding: 40px 0 40px 0;
+  max-width: 100%;
 }
 
 .servicesContainer {
