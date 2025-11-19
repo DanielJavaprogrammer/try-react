@@ -1,11 +1,12 @@
 .outstandingContainer {
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  border-bottom: 1px solid var(--gray);
 }
 
 .title {
@@ -18,9 +19,9 @@
 
 .subtitle {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--white);
-  max-width: 100%;
+  max-width: 80%;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 60px;
@@ -34,6 +35,7 @@
   gap: 20px;
   text-align: center;
   flex-wrap: wrap;
+  padding-bottom: 50px;
 }
 
 .card {
@@ -101,5 +103,6 @@
 @media (max-width: 768px) {
   .subtitle {
     font-size: 1rem;
+    width: 100%;
   }
 }

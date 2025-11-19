@@ -1,0 +1,96 @@
+.container {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  flex: 1 1 450px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card h1 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+}
+
+.card p {
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card:last-child {
+  text-align: center;
+  align-items: center;
+}
+
+.card:first-child {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.card img {
+  max-width: 30%;
+  min-width: 150px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.btn {
+  padding: 12px 26px;
+  background-color: var(--pink-dark);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  text-shadow: var(--minimum-shadow);
+  font-weight: bold;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px rgba(87, 87, 87, 0.623), 0 0 20px rgba(82, 82, 82, 0.646),
+    0 0 30px rgba(87, 87, 87, 0.603);
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 30px;
+  }
+
+  .card:last-child {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .card img {
+    max-width: 30%;
+  }
+}

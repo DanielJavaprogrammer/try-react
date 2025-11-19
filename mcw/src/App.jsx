@@ -9,6 +9,9 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import HowToUse from "./components/HowToUse/HowToUse";
 import Outstanding from "./components/Outstanding/Outstanding";
+import WorkerSection from "./components/WorkerSection/WorkerSection";
+import Fluxo from "./components/Fluxo/Fluxo";
+import PayInfo from "./components/PayInfo/PayInfo";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
       <ServicesSection />
       <HowToUse />
       <Outstanding />
+      <WorkerSection />
+      <Fluxo />
+      <PayInfo />
     </div>
   );
 }
