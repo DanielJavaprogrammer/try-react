@@ -12,6 +12,7 @@ import Outstanding from "./components/Outstanding/Outstanding";
 import WorkerSection from "./components/WorkerSection/WorkerSection";
 import Fluxo from "./components/Fluxo/Fluxo";
 import PayInfo from "./components/PayInfo/PayInfo";
+import FooterContact from "./components/FooterContact/FooterContact";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <WorkerSection />
       <Fluxo />
       <PayInfo />
+      <FooterContact />
     </div>
   );
 }

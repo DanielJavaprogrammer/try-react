@@ -1,0 +1,217 @@
+.container {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: red;
+}
+
+.columnBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoWrapper img {
+  width: 150px;
+  margin-bottom: 0.5rem;
+}
+
+.logoWrapper h2 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+/* Caixa com borda ao redor dos ícones sociais */
+.socialBox {
+  display: flex;
+  border: 1px solid var(--color-text-light);
+  padding: 0.5rem;
+  width: fit-content; /* Faz a borda envolver apenas os ícones */
+  gap: 1rem;
+  border-radius: 4px;
+}
+
+.socialBox img {
+  width: 25px;
+  height: 25px;
+  /* Os seus ícones de redes sociais já estão em branco (ou SVG) para combinar com o fundo escuro */
+}
+
+/*
+=============================
+    Coluna 2: Links de Navegação
+=============================
+*/
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem; /* Espaçamento entre o grupo de links superior e inferior */
+  flex-basis: 30%; /* Define a largura da coluna */
+}
+
+.linkGroup {
+  /* O container da lista de links (que inclui o nav) */
+  position: relative; /* Necessário para posicionar a linha decorativa */
+}
+
+.linkGroup ul {
+  list-style: none;
+  padding: 0 0 0 2rem; /* Adiciona padding à esquerda para dar espaço para a linha */
+  margin: 0;
+}
+
+.linkGroup li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.linkGroup a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.linkGroup a:hover {
+  color: var(--color-accent);
+}
+
+/*
+===================================================
+    EFEITO EXTREMAMENTE PROFISSIONAL: LINHA DECORATIVA (THE TRICKY PART)
+===================================================
+*/
+
+/* 1. O Segmento da Linha Vertical em si (usando ::before) */
+.linkGroup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* Coloca a linha no início da div .linkGroup */
+  width: 2px;
+  background-color: var(--color-accent); /* A cor dourada/bege */
+}
+
+/* 2. O Losango/Diamante no topo (usando ::after) */
+.linkGroup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px; /* Move-o para centralizar no segmento de linha */
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  transform: rotate(45deg); /* Gira para formar o losango */
+}
+
+/* Para o segundo grupo de links, adicionamos um losango na parte inferior */
+.columnLinks .linkGroup:nth-child(2)::after {
+  /* Reposiciona o 'after' para servir como diamante inferior (ou usar outro pseudoelemento) */
+  top: auto; /* Desfaz o 'top: 0' do seletor anterior */
+  bottom: 0;
+}
+
+/*
+=============================
+    Coluna 3: Contato e CTA
+=============================
+*/
+.columnContact {
+  flex-basis: 30%; /* Define a largura da coluna */
+  text-align: right;
+  padding-top: 0.5rem; /* Alinhamento visual com os links */
+}
+
+.columnContact h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contactInfo a {
+  display: block; /* Garante que cada item fique em sua própria linha */
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.ctaButton {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+  border-color: var(--color-accent);
+}
+
+/*
+=============================
+    Responsividade Básica
+=============================
+*/
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column; /* Empilha as colunas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .columnBrand,
+  .columnLinks,
+  .columnContact {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .columnContact {
+    text-align: center;
+  }
+
+  .logoWrapper {
+    align-items: center;
+  }
+
+  /* Ajusta a linha decorativa para telas menores (pode ser removida ou adaptada) */
+  .linkGroup ul {
+    padding-left: 0;
+  }
+  .linkGroup::before,
+  .linkGroup::after,
+  .columnContact address br {
+    display: none; /* Remove a linha decorativa e a quebra de linha para simplificar o layout móvel */
+  }
+}
