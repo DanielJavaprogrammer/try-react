@@ -15,14 +15,13 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  background-color: red;
 }
 
 .columnBrand {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
+  gap: 2rem;
 }
 
 .logoWrapper {
@@ -38,47 +37,39 @@
 
 .logoWrapper h2 {
   font-family: "Orbitron", sans-serif;
-  color: var(--white);
   font-size: 2rem;
+  color: var(--white);
 }
 
-/* Caixa com borda ao redor dos ícones sociais */
 .socialBox {
   display: flex;
-  border: 1px solid var(--color-text-light);
-  padding: 0.5rem;
-  width: fit-content; /* Faz a borda envolver apenas os ícones */
+  width: fit-content;
   gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-text-light);
   border-radius: 4px;
 }
 
 .socialBox img {
   width: 25px;
   height: 25px;
-  /* Os seus ícones de redes sociais já estão em branco (ou SVG) para combinar com o fundo escuro */
 }
 
-/*
-=============================
-    Coluna 2: Links de Navegação
-=============================
-*/
 .columnLinks {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem; /* Espaçamento entre o grupo de links superior e inferior */
-  flex-basis: 30%; /* Define a largura da coluna */
+  flex-basis: 30%;
+  gap: 3.5rem;
 }
 
 .linkGroup {
-  /* O container da lista de links (que inclui o nav) */
-  position: relative; /* Necessário para posicionar a linha decorativa */
+  position: relative;
 }
 
 .linkGroup ul {
   list-style: none;
-  padding: 0 0 0 2rem; /* Adiciona padding à esquerda para dar espaço para a linha */
   margin: 0;
+  padding: 0 0 0 2rem;
 }
 
 .linkGroup li {
@@ -88,88 +79,78 @@
 }
 
 .linkGroup a {
-  color: var(--color-text-light);
+  color: var(--white);
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 1.2rem;
 }
 
 .linkGroup a:hover {
   color: var(--color-accent);
 }
 
-/*
-===================================================
-    EFEITO EXTREMAMENTE PROFISSIONAL: LINHA DECORATIVA (THE TRICKY PART)
-===================================================
-*/
-
-/* 1. O Segmento da Linha Vertical em si (usando ::before) */
+/* EFEITO DECORATIVO (Linha e Losango) */
 .linkGroup::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0; /* Coloca a linha no início da div .linkGroup */
+  left: 0;
   width: 2px;
-  background-color: var(--color-accent); /* A cor dourada/bege */
+  background-color: var(--color-accent);
 }
 
-/* 2. O Losango/Diamante no topo (usando ::after) */
 .linkGroup::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -4px; /* Move-o para centralizar no segmento de linha */
+  left: -4px;
   width: 10px;
   height: 10px;
   background-color: var(--color-accent);
-  transform: rotate(45deg); /* Gira para formar o losango */
+  transform: rotate(45deg);
 }
 
-/* Para o segundo grupo de links, adicionamos um losango na parte inferior */
 .columnLinks .linkGroup:nth-child(2)::after {
-  /* Reposiciona o 'after' para servir como diamante inferior (ou usar outro pseudoelemento) */
-  top: auto; /* Desfaz o 'top: 0' do seletor anterior */
+  top: auto;
   bottom: 0;
 }
 
-/*
-=============================
-    Coluna 3: Contato e CTA
-=============================
-*/
 .columnContact {
-  flex-basis: 30%; /* Define a largura da coluna */
+  flex-basis: 30%;
+  padding-top: 0.5rem;
   text-align: right;
-  padding-top: 0.5rem; /* Alinhamento visual com os links */
+  color: var(--white);
+  font-family: "Poppins";
 }
 
 .columnContact h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
 .contactInfo a {
-  display: block; /* Garante que cada item fique em sua própria linha */
+  display: block;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   font-weight: 400;
   color: var(--color-text-light);
   text-decoration: none;
-  margin-bottom: 0.5rem;
 }
 
 .ctaButton {
   background-color: transparent;
-  color: var(--color-text-light);
-  border: 1px solid var(--color-text-light);
   padding: 0.75rem 1.5rem;
   margin-top: 2rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s;
+  border: 1px solid var(--white);
   border-radius: 4px;
+  color: var(--color-text-light);
+  transition: all 0.3s;
+  font-family: inherit;
 }
 
 .ctaButton:hover {
@@ -178,14 +159,10 @@
   border-color: var(--color-accent);
 }
 
-/*
-=============================
-    Responsividade Básica
-=============================
-*/
+/* RESPONSIVIDADE */
 @media (max-width: 900px) {
   .content {
-    flex-direction: column; /* Empilha as colunas */
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
@@ -195,23 +172,21 @@
   .columnContact {
     flex-basis: 100%;
     margin-bottom: 2rem;
-  }
-
-  .columnContact {
-    text-align: center;
+    text-align: center; /* Simplificação: Centraliza texto nas colunas */
   }
 
   .logoWrapper {
     align-items: center;
   }
 
-  /* Ajusta a linha decorativa para telas menores (pode ser removida ou adaptada) */
   .linkGroup ul {
     padding-left: 0;
   }
+
+  /* Remove elementos puramente decorativos em telas menores */
   .linkGroup::before,
   .linkGroup::after,
   .columnContact address br {
-    display: none; /* Remove a linha decorativa e a quebra de linha para simplificar o layout móvel */
+    display: none;
   }
 }

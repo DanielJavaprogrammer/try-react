@@ -1,10 +1,5 @@
 import "./index.css";
 import Header from "./components/Header/Header";
-// import { Routes, Route } from "react-router-dom";
-
-// import Home from "./pages/Home";
-// import Sobre from "./pages/Sobre";
-// import Contato from "./pages/Contato";
 import HeroSection from "./components/HeroSection/HeroSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import HowToUse from "./components/HowToUse/HowToUse";
@@ -13,19 +8,44 @@ import WorkerSection from "./components/WorkerSection/WorkerSection";
 import Fluxo from "./components/Fluxo/Fluxo";
 import PayInfo from "./components/PayInfo/PayInfo";
 import FooterContact from "./components/FooterContact/FooterContact";
+import ScrollRevealWrapper from "./components/ScrollRevealWrapper/ScrollRevealWrapper";
 
 function App() {
   return (
     <div>
       <Header />
-      <HeroSection />
-      <ServicesSection />
-      <HowToUse />
-      <Outstanding />
-      <WorkerSection />
-      <Fluxo />
-      <PayInfo />
-      <FooterContact />
+
+      <ScrollRevealWrapper>
+        <HeroSection />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <ServicesSection />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <HowToUse />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <Outstanding />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <WorkerSection />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <Fluxo />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <PayInfo />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <FooterContact />
+      </ScrollRevealWrapper>
     </div>
   );
 }
