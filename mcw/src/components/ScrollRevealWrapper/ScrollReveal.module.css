@@ -1,36 +1,10 @@
-/* ======================================= */
-/* ScrollReveal.module.css            */
-/* ======================================= */
-
-/* 1. ESTADO INICIAL (OCULTO) */
-/*
-   A classe 'scrollRevealContainer' é aplicada ao componente
-   que deve começar invisível.
-*/
 .scrollRevealContainer {
-  /*
-     Define as propriedades que serão animadas/transicionadas.
-     A duração de 0.8s e a função de temporização 'ease-out'
-     proporcionam um movimento suave.
-  */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
-  /* Oculta o elemento no início */
+  transition: opacity 2s ease-out, transform 2s ease-out;
   opacity: 0;
-
-  /* Desloca o elemento 40px para baixo (efeito "vindo de baixo") */
   transform: translateY(40px);
 }
 
-/* 2. ESTADO FINAL (VISÍVEL) */
-/*
-   A classe 'isVisible' é adicionada dinamicamente pelo hook
-   'useScrollReveal' quando o elemento entra na viewport.
-*/
 .isVisible {
-  /* Torna o elemento totalmente visível */
   opacity: 1;
-
-  /* Retorna o elemento à sua posição original (sem deslocamento) */
   transform: translateY(0);
 }

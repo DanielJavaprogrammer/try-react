@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, #1c3263, #442063);
   position: relative;
   border-bottom: 1px solid var(--gray);
 }
