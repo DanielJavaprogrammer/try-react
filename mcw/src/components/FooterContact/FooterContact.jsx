@@ -12,7 +12,7 @@ function FooterContact() {
         <div className={styles.columnBrand}>
           <div className={styles.logoWrapper}>
             <img src={logo} alt="Logo Maximum Click World" />
-            <h2>Maximum Click World</h2>
+            <h2>aximum World Click</h2>
           </div>
 
           <div className={styles.socialBox}>

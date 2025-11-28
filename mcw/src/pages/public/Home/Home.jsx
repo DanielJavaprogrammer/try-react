@@ -1,14 +1,45 @@
+import HeroSection from '../../../components/HeroSection/HeroSection';
+import ServicesSection from '../../../components/ServicesSection/ServicesSection';
+import HowToUse from '../../../components/HowToUse/HowToUse';
+import Outstanding from '../../../components/Outstanding/Outstanding';
+import WorkerSection from '../../../components/WorkerSection/WorkerSection';
+import Fluxo from '../../../components/Fluxo/Fluxo';
+import PayInfo from '../../../components/PayInfo/PayInfo';
+import ScrollRevealWrapper from '../../../components/ScrollRevealWrapper/ScrollRevealWrapper';
+
 function Home() {
   return (
-    <>
-      <div className="w-full h-full bg-blue-100 flex justify-center items-center">
-        <h1>Pagina Home</h1>
-        {/* <img alt="foto" src="../src/assets/wallpaper.jpg" className="w-300"/> */}
-      </div>
-    </>
+    <main>
+      <ScrollRevealWrapper>
+        <HeroSection />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <ServicesSection />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <HowToUse />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <Outstanding />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <WorkerSection />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <Fluxo />
+      </ScrollRevealWrapper>
+
+      <ScrollRevealWrapper>
+        <PayInfo />
+      </ScrollRevealWrapper>
+      
+    </main>
   );
 }
 
 export default Home;
-
-

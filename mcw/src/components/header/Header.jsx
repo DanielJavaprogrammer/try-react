@@ -6,7 +6,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.headerLogo}>
         <img src="../src/components/header/logo.png" alt="logo" />
-        <h1>Maximum Click World</h1>
+        <h1>Maximum World Click</h1>
       </div>
       <div className={styles.headerLinks}>
         <Link to="/signupWorker">
