@@ -9,7 +9,7 @@ function Header() {
         <h1>Maximum World Click</h1>
       </div>
       <div className={styles.headerLinks}>
-        <Link to="/signupWorker">
+        <Link to="/sejaprofissional">
           <span className={styles.linkText}>Sou um profissional</span>
           <img src="../src/components/header/underline.png" alt="underline" />
         </Link>

@@ -1,0 +1,12 @@
+:root {
+  --white: #ffffff;
+  --pink-dark: #d73cbe;
+  --pink-glow: rgba(215, 60, 190, 0.4);
+  --gray: #636363;
+  --light-gray: #f4f4f4;
+  --dark-purple: #2c1e4a;
+  --dark-purple-transparent: rgba(44, 30, 74, 0.95);
+  --color-accent: #c5a47e;
+  --minimum-shadow: 0.3px 0.3px 1.5px rgba(0, 0, 0, 0.7);
+  --card-shadow: 0 10px 30px -10px rgba(44, 30, 74, 0.2);
+}
