@@ -10,3 +10,15 @@
   --minimum-shadow: 0.3px 0.3px 1.5px rgba(0, 0, 0, 0.7);
   --card-shadow: 0 10px 30px -10px rgba(44, 30, 74, 0.2);
 }
+
+body {
+  margin: 0;
+  background-color: var(--light-gray);
+  font-family: "Poppins", sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--white), var(--color-accent));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
