@@ -1,16 +1,10 @@
 .heroSection {
   position: relative;
-  min-height: 90vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Imagem de fundo */
-  background-image: url("[https://images.unsplash.com/photo-1535378437323-955586e95bed?q=80&w=2600&auto=format&fit=crop](https://images.unsplash.com/photo-1535378437323-955586e95bed?q=80&w=2600&auto=format&fit=crop)");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 .overlay {
@@ -31,7 +25,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 2rem;
 }
 
@@ -45,6 +39,7 @@
   font-size: 0.875rem;
   background-color: rgba(44, 30, 74, 0.3);
   backdrop-filter: blur(4px);
+  padding: 15px;
 }
 
 .title {
@@ -102,6 +97,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-family: inherit;
 }
 
 .btnPrimary:hover {
